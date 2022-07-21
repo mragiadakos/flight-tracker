@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "6ddf7dd5-9db3-4bd7-8f4e-e32e55afd331",
+		"name": "flight-tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sort",
+			"item": [
+				{
+					"name": "Success Sorting",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paths\": [[\"IND\", \"EWR\"], [\"SFO\", \"ATL\"], [\"GSO\", \"IND\"], [\"ATL\", \"GSO\"]]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1234/sort",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"sort"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Failed Sorting",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paths\": [[\"IND\", \"EWR\"], [\"SFO\", \"ATL\"], [\"GSO\", \"IND\"], [\"ATL\"]]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1234/sort",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"sort"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
